@@ -11,6 +11,12 @@ AND `date_of_birth` <= "1990-12-31";
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
+```sql
+SELECT *,  TIMESTAMPDIFF(YEAR, date_of_birth, "2025-01-07")
+FROM `students`
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, "2025-01-07") >="30";
+```
+
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
    laurea (286)
 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
